@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.App {
+  text-align: center;
+  align-content: center;
+  align-items: center;
+}
+
+
+.App-header {
+  background-color: #222;
+  padding: 20px;
+  color: white;
+}
