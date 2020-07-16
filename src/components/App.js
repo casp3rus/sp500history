@@ -5,6 +5,7 @@ import _ from "lodash"
 import "./App.css";
 
 import data from "../data/data.json";
+import cumulativeReturn from "../utils/cumulativeReturn"
 
 function App() {
   const [allHistory, setAllHistory] = useState([])
@@ -12,16 +13,16 @@ function App() {
 
   useEffect(() => {
     setAllHistory(data)
-  })
+  }, [])
 
   const handleChange = (rangeValue) => {
-    let min = rangeValue[0]
-    let max = rangeValue[1]
+    
+    let [min, max] = rangeValue
 
-    const tempHistory = _.filter(data, obj => {
+    const tempFilteredHistory = _.filter(allHistory, obj => {
       return min <= obj.year && obj.year <= max
     })
-    setFilteredHistory(tempHistory)
+    setFilteredHistory(cumulativeReturn(tempFilteredHistory))
   }
   
 
@@ -34,7 +35,7 @@ function App() {
       <ReturnList data={
         filteredHistory ? 
         filteredHistory :
-        allHistory
+        cumulativeReturn(allHistory)
       } />
     </div>
   );

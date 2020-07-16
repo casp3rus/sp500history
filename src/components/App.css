@@ -15,3 +15,11 @@
   padding: 20px;
   color: white;
 }
+
+.positive {
+  color: #00bd06;
+}
+
+.negative {
+  color: #ff0000;
+}

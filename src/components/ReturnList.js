@@ -4,7 +4,7 @@ import ReturnLine from "./ReturnLine";
 const ReturnList = ({ data }) => {
   const list = data.map(element => {
     return (
-      <ReturnLine key={`${element.year} + ${element.id}`} element={element} cumulativeReturn={10}/>
+      <ReturnLine key={`${element.year} + ${element.id}`} element={element} />
     );
   });
   return (
