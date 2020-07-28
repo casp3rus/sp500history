@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import RangeSlider from "./RangeSlider";
 import ReturnList from "./ReturnList";
+import LogRocket from 'logrocket';
 import _ from "lodash"
 import "./App.css";
 
@@ -42,3 +43,5 @@ function App() {
 }
 
 export default App;
+
+LogRocket.init('x7qmce/adrian-m-popan');
