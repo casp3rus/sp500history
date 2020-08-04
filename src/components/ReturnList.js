@@ -2,7 +2,7 @@ import React from "react";
 import ReturnLine from "./ReturnLine";
 
 const ReturnList = ({ data }) => {
-  const list = data.map(element => {
+  const list = data.map((element) => {
     return (
       <ReturnLine key={`${element.year} + ${element.id}`} element={element} />
     );
@@ -21,9 +21,7 @@ const ReturnList = ({ data }) => {
             <h3 className="ui center aligned header">Cumulative Return</h3>
           </th>
         </tr>
-
-      {list}
-
+        {list}
       </tbody>
     </table>
   );
