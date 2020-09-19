@@ -2,7 +2,6 @@ import React from "react";
 import {
   ResponsiveContainer,
   AreaChart,
-  linearGradient,
   XAxis,
   YAxis,
   Tooltip,
